@@ -1,0 +1,6 @@
+framework module SuperbGitHub [system] {
+  umbrella header "SuperbGitHub.h"
+
+  export *
+  module * { export * }
+}
