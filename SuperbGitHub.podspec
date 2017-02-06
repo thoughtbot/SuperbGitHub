@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/#{s.name}/**/*.{swift,h}"
   s.module_map = "Sources/#{s.name}/module.modulemap"
   s.public_header_files = "Sources/#{s.name}/#{s.name}.h"
+  s.dependency "Superb", "~> 0.1.0"
 end

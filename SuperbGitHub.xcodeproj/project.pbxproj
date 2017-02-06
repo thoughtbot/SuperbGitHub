@@ -14,6 +14,10 @@
 		4ABAD0311E4522F100661CD9 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD02A1E45229C00661CD9 /* Quick.framework */; };
 		4ABAD0331E4522FC00661CD9 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD0291E45229C00661CD9 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ABAD0341E4522FC00661CD9 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABAD02A1E45229C00661CD9 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AC650FC1E48F32F00A8F996 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FA1E48F32F00A8F996 /* Result.framework */; };
+		4AC650FD1E48F32F00A8F996 /* Superb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FB1E48F32F00A8F996 /* Superb.framework */; };
+		4AC650FE1E48F34100A8F996 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FA1E48F32F00A8F996 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AC650FF1E48F34100A8F996 /* Superb.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FB1E48F32F00A8F996 /* Superb.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 			files = (
 				4ABAD0331E4522FC00661CD9 /* Nimble.framework in Copy Frameworks */,
 				4ABAD0341E4522FC00661CD9 /* Quick.framework in Copy Frameworks */,
+				4AC650FE1E48F34100A8F996 /* Result.framework in Copy Frameworks */,
+				4AC650FF1E48F34100A8F996 /* Superb.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,6 +56,8 @@
 		4ABAD01C1E450C6700661CD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ABAD0291E45229C00661CD9 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4ABAD02A1E45229C00661CD9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		4AC650FA1E48F32F00A8F996 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		4AC650FB1E48F32F00A8F996 /* Superb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Superb.framework; path = Carthage/Build/iOS/Superb.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC650FC1E48F32F00A8F996 /* Result.framework in Frameworks */,
+				4AC650FD1E48F32F00A8F996 /* Superb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +142,8 @@
 			children = (
 				4ABAD0291E45229C00661CD9 /* Nimble.framework */,
 				4ABAD02A1E45229C00661CD9 /* Quick.framework */,
+				4AC650FA1E48F32F00A8F996 /* Result.framework */,
+				4AC650FB1E48F32F00A8F996 /* Superb.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
