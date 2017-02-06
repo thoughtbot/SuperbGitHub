@@ -18,6 +18,9 @@
 		4AC650FD1E48F32F00A8F996 /* Superb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FB1E48F32F00A8F996 /* Superb.framework */; };
 		4AC650FE1E48F34100A8F996 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FA1E48F32F00A8F996 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4AC650FF1E48F34100A8F996 /* Superb.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC650FB1E48F32F00A8F996 /* Superb.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4AC651031E48F4C500A8F996 /* GitHubAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC651001E48F4C500A8F996 /* GitHubAuthError.swift */; };
+		4AC651041E48F4C500A8F996 /* GitHubBasicAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC651011E48F4C500A8F996 /* GitHubBasicAuthProvider.swift */; };
+		4AC651051E48F4C500A8F996 /* GitHubOAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC651021E48F4C500A8F996 /* GitHubOAuthProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		4ABAD02A1E45229C00661CD9 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4AC650FA1E48F32F00A8F996 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		4AC650FB1E48F32F00A8F996 /* Superb.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Superb.framework; path = Carthage/Build/iOS/Superb.framework; sourceTree = "<group>"; };
+		4AC651001E48F4C500A8F996 /* GitHubAuthError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthError.swift; sourceTree = "<group>"; };
+		4AC651011E48F4C500A8F996 /* GitHubBasicAuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubBasicAuthProvider.swift; sourceTree = "<group>"; };
+		4AC651021E48F4C500A8F996 /* GitHubOAuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubOAuthProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 		4ABAD00E1E450C6700661CD9 /* SuperbGitHub */ = {
 			isa = PBXGroup;
 			children = (
+				4AC651001E48F4C500A8F996 /* GitHubAuthError.swift */,
+				4AC651011E48F4C500A8F996 /* GitHubBasicAuthProvider.swift */,
+				4AC651021E48F4C500A8F996 /* GitHubOAuthProvider.swift */,
 				4ABAD00F1E450C6700661CD9 /* SuperbGitHub.h */,
 				4ABAD0101E450C6700661CD9 /* Info.plist */,
 			);
@@ -212,6 +221,7 @@
 					4ABAD00B1E450C6700661CD9 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 8E7TQ638ZD;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					4ABAD0141E450C6700661CD9 = {
@@ -261,6 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC651041E48F4C500A8F996 /* GitHubBasicAuthProvider.swift in Sources */,
+				4AC651031E48F4C500A8F996 /* GitHubAuthError.swift in Sources */,
+				4AC651051E48F4C500A8F996 /* GitHubOAuthProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(TARGET_NAME:lower)";
@@ -376,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thoughtbot.$(TARGET_NAME:lower)";
 				SDKROOT = iphoneos;
@@ -391,6 +404,7 @@
 		4ABAD0211E450C6700661CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
@@ -402,6 +416,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -409,6 +424,7 @@
 		4ABAD0221E450C6700661CD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
@@ -427,6 +443,7 @@
 		4ABAD0241E450C6700661CD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
 				INFOPLIST_FILE = "Tests/$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -438,6 +455,7 @@
 		4ABAD0251E450C6700661CD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8E7TQ638ZD;
 				INFOPLIST_FILE = "Tests/$(TARGET_NAME)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
