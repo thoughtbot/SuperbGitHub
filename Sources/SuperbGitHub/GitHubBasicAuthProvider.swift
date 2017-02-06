@@ -10,6 +10,9 @@ public final class GitHubBasicAuthProvider: AuthenticationProvider {
   private var login = ""
   private var password = ""
 
+  public init() {
+  }
+
   public func authorize(_ request: inout URLRequest, with token: String) {
     request.setValue("token \(token)", forHTTPHeaderField: "Authorization")
   }
