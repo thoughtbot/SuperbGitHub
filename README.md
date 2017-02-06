@@ -139,6 +139,48 @@ and the user's credentials are discarded.
 [oauth-non-web]: https://developer.github.com/v3/oauth/#non-web-application-flow
 [create-token]: https://developer.github.com/v3/oauth_authorizations/#create-a-new-authorization
 
+## Installation
+
+### [Carthage][]
+
+[Carthage]: https://github.com/Carthage/Carthage
+
+Add the following to your Cartfile:
+
+```
+github "thoughtbot/Superb"
+github "thoughtbot/SuperbGitHub" ~> 0.0.4
+```
+
+Then run `carthage update SuperbGitHub`.
+
+Follow the current instructions in [Carthage's README][carthage-installation]
+for up to date installation instructions.
+
+In addition to `SuperbGitHub.framework`, you will need to embed both
+`Superb.framework` and `Result.framework` in your application.
+
+[carthage-installation]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+
+### [CocoaPods][]
+
+[CocoaPods]: https://cocoapods.org
+
+Add the following to your [Podfile](https://guides.cocoapods.org/using/the-podfile.html):
+
+```ruby
+pod "Superb"
+pod "SuperbGitHub", "~> 0.0.4"
+```
+
+You will also need to make sure you're opting into using frameworks:
+
+```ruby
+use_frameworks!
+```
+
+Then run `pod install`.
+
 ## Contributing
 
 See the [CONTRIBUTING][] document.
