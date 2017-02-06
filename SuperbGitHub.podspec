@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     "thoughtbot" => nil,
   }
   s.social_media_url = "https://twitter.com/thoughtbot"
-  s.platform = :ios, "8.0"
+  s.platform = :ios, "9.0"
   s.source = { git: "https://github.com/thoughtbot/#{s.name}.git", tag: "#{s.version}" }
   s.source_files = "Sources/#{s.name}/**/*.{swift,h}"
   s.module_map = "Sources/#{s.name}/module.modulemap"
