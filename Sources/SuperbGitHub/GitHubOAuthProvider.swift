@@ -5,13 +5,13 @@ import UIKit
 let authorizeURL = URL(string: "https://github.com/login/oauth/authorize")!
 let createAccessTokenURL = URL(string: "https://github.com/login/oauth/access_token")!
 
-final class GitHubOAuthProvider: AuthenticationProvider {
-  static let identifier = "com.thoughtbot.superb.github.oauth"
-  static let keychainServiceName = "GitHub OAuth"
+public final class GitHubOAuthProvider: AuthenticationProvider {
+  public static let identifier = "com.thoughtbot.superb.github.oauth"
+  public static let keychainServiceName = "GitHub OAuth"
 
-  let clientId: String
-  let clientSecret: String
-  let redirectURI: URL
+  public let clientId: String
+  public let clientSecret: String
+  public let redirectURI: URL
 
   private var currentAuthorization: (
     safariViewController: SFSafariViewController,
@@ -19,17 +19,17 @@ final class GitHubOAuthProvider: AuthenticationProvider {
     completionHandler: (AuthenticationResult<String>) -> Void
   )?
 
-  init(clientId: String, clientSecret: String, redirectURI: URL) {
+  public init(clientId: String, clientSecret: String, redirectURI: URL) {
     self.clientId = clientId
     self.clientSecret = clientSecret
     self.redirectURI = redirectURI
   }
 
-  func authorize(_ request: inout URLRequest, with token: String) {
+  public func authorize(_ request: inout URLRequest, with token: String) {
     request.setValue("token \(token)", forHTTPHeaderField: "Authorization")
   }
 
-  func authenticate(over viewController: UIViewController, completionHandler: @escaping (AuthenticationResult<String>) -> Void) {
+  public func authenticate(over viewController: UIViewController, completionHandler: @escaping (AuthenticationResult<String>) -> Void) {
     precondition(currentAuthorization == nil)
 
     var authorizeURLComponents = URLComponents(url: authorizeURL, resolvingAgainstBaseURL: false)!
@@ -51,7 +51,7 @@ final class GitHubOAuthProvider: AuthenticationProvider {
     completionHandler(.cancelled)
   }
 
-  func handleCallback(_ url: URL, options: [UIApplicationOpenURLOptionsKey: Any]) -> Bool {
+  public func handleCallback(_ url: URL, options: [UIApplicationOpenURLOptionsKey: Any]) -> Bool {
     guard let authorization = self.currentAuthorization,
       let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
       let query = components.queryItems,

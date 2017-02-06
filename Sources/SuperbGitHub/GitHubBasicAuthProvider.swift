@@ -3,18 +3,18 @@ import UIKit
 
 let createPersonalAccessTokenURL = URL(string: "https://api.github.com/authorizations")!
 
-final class GitHubBasicAuthProvider: AuthenticationProvider {
-  static let identifier = "com.thoughtbot.superb.github.basic"
-  static let keychainServiceName = "GitHub Personal Access Token"
+public final class GitHubBasicAuthProvider: AuthenticationProvider {
+  public static let identifier = "com.thoughtbot.superb.github.basic"
+  public static let keychainServiceName = "GitHub Personal Access Token"
 
   private var login = ""
   private var password = ""
 
-  func authorize(_ request: inout URLRequest, with token: String) {
+  public func authorize(_ request: inout URLRequest, with token: String) {
     request.setValue("token \(token)", forHTTPHeaderField: "Authorization")
   }
 
-  func authenticate(over viewController: UIViewController, completionHandler: @escaping (AuthenticationResult<String>) -> Void) {
+  public func authenticate(over viewController: UIViewController, completionHandler: @escaping (AuthenticationResult<String>) -> Void) {
     let alert = UIAlertController(title: "Sign in to GitHub", message: nil, preferredStyle: .alert)
 
     alert.addTextField { textField in
