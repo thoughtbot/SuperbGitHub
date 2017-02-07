@@ -149,7 +149,7 @@ Add the following to your Cartfile:
 
 ```
 github "thoughtbot/Superb"
-github "thoughtbot/SuperbGitHub" ~> 0.0.4
+github "thoughtbot/SuperbGitHub" ~> 0.1
 ```
 
 Then run `carthage update SuperbGitHub`.
@@ -170,7 +170,7 @@ Add the following to your [Podfile](https://guides.cocoapods.org/using/the-podfi
 
 ```ruby
 pod "Superb"
-pod "SuperbGitHub", "~> 0.0.4"
+pod "SuperbGitHub", "~> 0.1.0"
 ```
 
 You will also need to make sure you're opting into using frameworks:
